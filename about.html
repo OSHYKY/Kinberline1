@@ -1,0 +1,294 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Kinberline</title>
+  <meta name="description" content="About Kinberline — handcrafted earrings, materials, and atelier.">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+  <style>
+    /* Color system */
+    :root{
+      --bg: #FAF8F5;
+      --surface: #FFFFFF;
+      --text: #1A1A1A;
+      --muted: #6F6F6F;
+      --accent: #C6A27E;
+      --accent-deep: #A07A53;
+      --border: #E8E2DA;
+      --radius: 12px;
+      --shadow: 0 12px 40px rgba(0,0,0,0.06);
+      --glass: rgba(255,255,255,0.6);
+      --trans: 300ms cubic-bezier(.2,.9,.3,1);
+    }
+
+    /* Dark theme */
+    body.dark{
+      --bg: #0F0F10;
+      --surface: #1E1E1E;
+      --text: #F5F5F5;
+      --muted: #BDBDBD;
+      --accent: #D8B892;
+      --accent-deep: #A07A53;
+      --border: #2A2A2A;
+      --glass: rgba(255,255,255,0.03);
+      --shadow: 0 18px 60px rgba(0,0,0,0.6);
+    }
+
+    /* Reset and base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      transition:background var(--trans), color var(--trans);
+    }
+
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Navigation */
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:18px 0;
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.35));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+    }
+    body.dark nav{
+      background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
+    }
+
+    .logo{
+      font-family:"Playfair Display",serif;
+      font-size:1.5rem;
+      letter-spacing:2px;
+      font-weight:600;
+      color:var(--text);
+    }
+
+    .nav-links{display:flex;align-items:center;gap:18px}
+    .nav-links a{
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:8px;
+      transition:background var(--trans), color var(--trans), transform var(--trans);
+    }
+    .nav-links a:hover{background:var(--glass); transform:translateY(-2px)}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+
+    .btn{
+      border:0;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+      transition:transform var(--trans), box-shadow var(--trans);
+    }
+    .btn-primary{
+      background:var(--accent);
+      color:white;
+      box-shadow:0 10px 30px rgba(198,162,126,0.12);
+    }
+    .btn-ghost{
+      background:transparent;border:1px solid var(--border);color:var(--text);
+    }
+
+    /* Hero */
+    .hero{
+      height:66vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:0 20px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06)),
+        url('assets/images/hero.jpg') center/cover no-repeat;
+      color: #fff;
+    }
+    body.dark .hero{background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)), url('assets/images/hero.jpg') center/cover no-repeat}
+    .hero .inner{max-width:900px}
+    .headline{
+      font-family:"Playfair Display",serif;
+      font-size:3.2rem;
+      margin:0;
+      letter-spacing:0.6px;
+      text-shadow:0 10px 30px rgba(0,0,0,0.45);
+    }
+    .sub{
+      margin-top:12px;color:rgba(255,255,255,0.92);font-size:1.05rem;
+    }
+    .hero .cta{margin-top:20px;display:flex;gap:12px;justify-content:center}
+
+    /* Sections */
+    section{padding:64px 0}
+    h2{font-family:"Playfair Display",serif;margin-bottom:8px}
+    h2::after{content:"";display:block;width:64px;height:4px;background:linear-gradient(90deg,var(--accent-deep),var(--accent));border-radius:3px;margin-top:12px}
+
+    .lead{color:var(--muted);max-width:760px;margin:12px 0 0;font-size:1.02rem}
+
+    /* Grid and cards */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:20px}
+    .card{
+      background:var(--surface);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:transform var(--trans), box-shadow var(--trans);
+      display:flex;flex-direction:column;
+    }
+    .card:hover{transform:translateY(-8px);box-shadow:0 22px 60px rgba(2,6,23,0.12)}
+    .card img{width:100%;height:320px;object-fit:cover;display:block}
+    .card-body{padding:16px;flex:1;display:flex;flex-direction:column}
+    .card h3{margin:0;font-size:1.05rem}
+    .card p{color:var(--muted);margin-top:8px;font-size:0.95rem;flex:1}
+    .price{margin-top:12px;color:var(--accent);font-weight:800}
+
+    /* Product detail teaser */
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(198,162,126,0.12), rgba(160,122,83,0.06));color:var(--accent-deep);font-weight:700;font-size:0.85rem}
+
+    /* Footer */
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted);font-size:0.95rem;text-align:center}
+
+    /* Controls */
+    .controls{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .input{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface);min-width:220px}
+    .pill{padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--text)}
+
+    /* Fade-in */
+    .fade-in{opacity:0;transform:translateY(18px);animation:fadeIn 700ms cubic-bezier(.2,.9,.3,1) forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .headline{font-size:2rem}
+      .hero{height:52vh}
+      nav{padding:12px 10px}
+      .card img{height:260px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="container">
+    <div class="logo">KINBERLINE</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">☾</button>
+      <a class="btn btn-primary" href="shop.html">Shop Earrings</a>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero" style="background-image: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06)), url('assets/images/about-hero.jpg')">
+      <div class="inner fade-in">
+        <h1 class="headline">Our Story</h1>
+        <p class="sub">Kinberline is a sister‑run brand crafting colourful clay earrings that feel personal, playful, and timeless.</p>
+      </div>
+    </header>
+
+    <section class="container fade-in">
+      <h2>Craft and Materials</h2>
+      <p class="lead">
+        Every pair of Kinberline earrings is handmade locally using high‑quality polymer clay, durable jewellery glue, and hypoallergenic silver or gold studs. 
+        Our focus is on creating pieces that are lightweight, comfortable, and designed to be worn every day.
+      </p>
+
+      <div class="grid" style="margin-top:22px">
+        <article class="card fade-in">
+          <img src="assets/images/workshop.jpg" alt="Artisan at work">
+          <div class="card-body">
+            <h3>Handmade With Care</h3>
+            <p>
+              Each earring is shaped, baked, sanded, and finished by hand. 
+              Our small‑batch process ensures every piece is unique — no two pairs are ever exactly the same.
+            </p>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <img src="assets/images/materials.jpg" alt="Materials">
+          <div class="card-body">
+            <h3>Thoughtful Materials</h3>
+            <p>
+              We use polymer clay for its versatility and vibrant colour range, paired with quality studs and strong jewellery adhesive for long‑lasting wear.
+            </p>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <img src="assets/images/packaging.jpg" alt="Packaging">
+          <div class="card-body">
+            <h3>Simple, Local Packaging</h3>
+            <p>
+              Our packaging is minimal, practical, and designed to reflect our values — simple, adaptable, and timeless.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container fade-in">
+      <h2>Meet the Founders</h2>
+      <p class="lead">
+        Kinberline was created by two sisters who wanted to bring colourful, universal, and affordable earrings to their local community. 
+        What started as a small creative project quickly grew into a brand built on connection — the line that ties us together.
+      </p>
+      <img src="assets/images/founder.jpg" alt="Founder portrait" style="margin-top:18px;max-width:420px;border-radius:12px;box-shadow:var(--shadow)">
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-family:'Playfair Display', serif; font-size:1.3rem; color:var(--text);">
+      Kinberline
+    </div>
+
+    <div style="margin-top:4px; font-style:italic; color:var(--muted);">
+      The line that connects us
+    </div>
+
+    <div style="margin-top:12px; color:var(--muted);">
+      Handmade clay stud earrings • Local & family‑made
+    </div>
+
+    <div style="margin-top:16px;">
+      <strong>Contact:</strong>
+      <a href="mailto:Kinberline1@outlook.com" style="color:var(--accent-deep); text-decoration:none;">
+        Kinberline1@outlook.com
+      </a>
+    </div>
+
+    <div style="margin-top:8px;">
+      <strong>Socials:</strong>
+      <a href="https://instagram.com/Kinberline1" target="_blank" style="color:var(--accent-deep); text-decoration:none;">
+        Instagram
+      </a>
+      •
+      <a href="https://youtube.com/@Kinberline1" target="_blank" style="color:var(--accent-deep); text-decoration:none;">
+        YouTube
+      </a>
+    </div>
+
+    <div style="margin-top:18px; color:var(--muted); font-size:0.85rem;">
+      © Kinberline — All rights reserved
+    </div>
+  </footer>
+
+</body>
+</html>
+
