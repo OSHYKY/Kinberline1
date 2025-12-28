@@ -179,25 +179,28 @@
   </style>
 </head>
 <body>
-  <nav class="container">
-    <div class="logo">KINBERLINE</div>
+ <nav class="container">
+  <div class="logo">KINBERLINE</div>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-  ☰
-</button>
+  <!-- Mobile toggle button -->
+  <button class="nav-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
 
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="collections.html">Collections</a>
-      <a href="contact.html" aria-current="page">Contact</a>
-    </div>
-    <div class="nav-actions">
-      <button id="theme-toggle" class="btn btn-ghost" aria-label="Toggle theme">☾</button>
-      <a class="btn btn-primary" href="shop.html">Shop Earrings</a>
-    </div>
-  </nav>
+  <!-- Links: used for both desktop and mobile -->
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop-only actions -->
+  <div class="nav-actions">
+    <button class="btn btn-ghost" onclick="window.location.href='shop.html'">Shop Now</button>
+  </div>
+</nav>
+
 
  <main class="container">
   <section class="fade-in" style="padding:48px 0">
@@ -327,6 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
 
 
 
