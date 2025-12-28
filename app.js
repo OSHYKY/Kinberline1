@@ -1,4 +1,3 @@
-```javascript
 // app.js - shared behavior for Kinberline
 const THEME_KEY = 'kin-theme';
 
@@ -10,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('#theme-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
       document.body.classList.toggle('dark');
-      localStorage.setItem(THEME_KEY, document.body.classList.contains('dark') ? 'dark' : 'light');
+      localStorage.setItem(
+        THEME_KEY,
+        document.body.classList.contains('dark') ? 'dark' : 'light'
+      );
     });
   });
 
@@ -23,8 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Mobile nav dropdown
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('nav-toggle');
- const links = document.querySelector('.nav-links');
-
+  const links = document.querySelector('.nav-links');
 
   if (toggle && links) {
     toggle.addEventListener('click', () => {
@@ -32,4 +33,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
