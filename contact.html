@@ -179,27 +179,30 @@
   </style>
 </head>
 <body>
- <nav class="container">
-  <div class="logo">KINBERLINE</div>
+  <nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
 
-  <!-- Mobile toggle button -->
-  <button class="nav-toggle" aria-label="Toggle navigation">
-    ☰
-  </button>
+    <div class="logo">KINBERLINE</div>
 
-  <!-- Links: used for both desktop and mobile -->
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <!-- Mobile toggle button -->
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-  <!-- Desktop-only actions -->
-  <div class="nav-actions">
-    <button class="btn btn-ghost" onclick="window.location.href='shop.html'">Shop Now</button>
+    <!-- Links -->
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Desktop-only actions -->
+    <div class="nav-actions">
+      <button class="btn btn-ghost" onclick="window.location.href='shop.html'">Shop Now</button>
+    </div>
+
   </div>
 </nav>
+
 
 
  <main class="container">
@@ -332,6 +335,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 </html>
+
 
 
 
