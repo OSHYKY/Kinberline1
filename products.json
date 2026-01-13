@@ -1,0 +1,22 @@
+[
+  {
+    "id": "rose-studs",
+    "name": "Rose Studs",
+    "price": 6.00,
+    "short": "Soft pink handmade clay studs",
+    "description": "Handmade polymer clay studs with hypoallergenic backs.",
+    "collection": "Studs",
+    "tags": ["pink", "clay", "stud"],
+    "images": ["assets/images/rose1.jpg"]
+  },
+  {
+    "id": "marble-drops",
+    "name": "Marble Drops",
+    "price": 8.00,
+    "short": "Elegant marble‑pattern drop earrings",
+    "description": "Lightweight polymer clay earrings with a marble swirl finish.",
+    "collection": "Drops",
+    "tags": ["marble", "clay", "drop"],
+    "images": ["assets/images/marble1.jpg"]
+  }
+]
