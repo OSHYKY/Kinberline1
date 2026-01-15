@@ -1,22 +1,102 @@
 [
   {
-    "id": "rose-studs",
-    "name": "Rose Studs",
+    "id": "blush-studs",
+    "name": "Blush Clay Studs",
     "price": 6.00,
-    "short": "Soft pink handmade clay studs",
-    "description": "Handmade polymer clay studs with hypoallergenic backs.",
+    "short": "Soft pastel pink clay studs",
+    "description": "Handmade polymer clay studs in a gentle blush tone with hypoallergenic stainless steel backs.",
     "collection": "Studs",
     "tags": ["pink", "clay", "stud"],
-    "images": ["assets/images/rose1.jpg"]
+    "images": ["assets/images/blush-studs.jpg"]
   },
   {
-    "id": "marble-drops",
-    "name": "Marble Drops",
+    "id": "sage-minis",
+    "name": "Sage Mini Studs",
+    "price": 6.00,
+    "short": "Earthy sage green studs",
+    "description": "Minimalist sage green clay studs designed for everyday comfort and subtle style.",
+    "collection": "Studs",
+    "tags": ["green", "clay", "minimal"],
+    "images": ["assets/images/sage-minis.jpg"]
+  },
+  {
+    "id": "sunset-drops",
+    "name": "Sunset Drops",
     "price": 8.00,
-    "short": "Elegant marble‑pattern drop earrings",
-    "description": "Lightweight polymer clay earrings with a marble swirl finish.",
+    "short": "Warm-toned drop earrings",
+    "description": "Warm sunset-inspired polymer clay drops with soft gradients and a lightweight feel.",
     "collection": "Drops",
-    "tags": ["marble", "clay", "drop"],
-    "images": ["assets/images/marble1.jpg"]
+    "tags": ["orange", "gradient", "drop"],
+    "images": ["assets/images/sunset-drops.jpg"]
+  },
+  {
+    "id": "marble-swirl",
+    "name": "Marble Swirl Studs",
+    "price": 7.00,
+    "short": "White and grey marble pattern",
+    "description": "Elegant marble-effect studs crafted from polymer clay, each pair uniquely patterned.",
+    "collection": "Studs",
+    "tags": ["marble", "neutral", "clay"],
+    "images": ["assets/images/marble-swirl.jpg"]
+  },
+  {
+    "id": "midnight-hoops",
+    "name": "Midnight Hoops",
+    "price": 10.00,
+    "short": "Deep navy clay hoops",
+    "description": "Bold navy blue hoops with a matte finish, lightweight and perfect for evening wear.",
+    "collection": "Hoops",
+    "tags": ["navy", "hoops", "bold"],
+    "images": ["assets/images/midnight-hoops.jpg"]
+  },
+  {
+    "id": "petal-drops",
+    "name": "Petal Drops",
+    "price": 9.00,
+    "short": "Soft petal-shaped earrings",
+    "description": "Delicate petal-shaped clay drops in soft pastel tones, inspired by spring florals.",
+    "collection": "Drops",
+    "tags": ["pastel", "floral", "drop"],
+    "images": ["assets/images/petal-drops.jpg"]
+  },
+  {
+    "id": "terra-studs",
+    "name": "Terra Clay Studs",
+    "price": 6.00,
+    "short": "Warm terracotta studs",
+    "description": "Earthy terracotta-toned studs with a smooth matte finish, perfect for natural palettes.",
+    "collection": "Studs",
+    "tags": ["terracotta", "earthy", "clay"],
+    "images": ["assets/images/terra-studs.jpg"]
+  },
+  {
+    "id": "ocean-waves",
+    "name": "Ocean Wave Drops",
+    "price": 8.00,
+    "short": "Blue wave-textured drops",
+    "description": "Textured clay drops inspired by ocean waves, featuring layered blue tones.",
+    "collection": "Drops",
+    "tags": ["blue", "textured", "drop"],
+    "images": ["assets/images/ocean-waves.jpg"]
+  },
+  {
+    "id": "pearl-minis",
+    "name": "Pearl Mini Studs",
+    "price": 7.00,
+    "short": "Pearl-effect clay studs",
+    "description": "Shimmering pearl-effect studs with a glossy finish, elegant and lightweight.",
+    "collection": "Studs",
+    "tags": ["pearl", "shimmer", "stud"],
+    "images": ["assets/images/pearl-minis.jpg"]
+  },
+  {
+    "id": "lavender-drops",
+    "name": "Lavender Drops",
+    "price": 8.00,
+    "short": "Soft lavender clay drops",
+    "description": "Calming lavender-toned drop earrings with a smooth matte finish and gentle curves.",
+    "collection": "Drops",
+    "tags": ["lavender", "pastel", "drop"],
+    "images": ["assets/images/lavender-drops.jpg"]
   }
 ]
