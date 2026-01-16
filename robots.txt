@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://oshyky.github.io/Kinberline/sitemap.xml
